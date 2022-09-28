@@ -1,24 +1,24 @@
+import { Button } from '@mui/material';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { toast, ToastContainer } from './toast';
 
 function App() {
+
+  function showSimpleToast() {
+    toast("Hello world!");
+  }
+
+  function showActionToast() {
+    toast({message: "Action confirmed.", action: <Button size="small">Undo</Button>});
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button onClick={showSimpleToast}>Simple Toast</Button>
+      <Button onClick={showActionToast}>Action Toast</Button>
+
+
+      <ToastContainer />
     </div>
   );
 }
