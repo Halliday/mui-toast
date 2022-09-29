@@ -1,6 +1,6 @@
 {
   "name": "@halliday/mui-toast",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
   "devDependencies": {
